@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Fotografía real pendiente</title>
+  <desc id="desc">Marcador de posición con una escena natural y cálida para reemplazar con una fotografía real del evento.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#C7B488"/><stop offset="1" stop-color="#6F795D"/></linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#53604A"/><stop offset="1" stop-color="#2F3D2B"/></linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .08"/></feFuncA></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1250" cy="230" r="125" fill="#F3D49A" opacity=".55"/>
+  <path d="M0 660C260 530 360 680 650 568c290-112 480 66 950-37v469H0Z" fill="url(#ground)"/>
+  <path d="M0 780c280-120 530-42 770-115 250-76 510-60 830-20v355H0Z" fill="#253326" opacity=".72"/>
+  <g fill="#1F2A1D" opacity=".75"><path d="M120 710 260 430l140 280Z"/><path d="M430 745 620 410l190 335Z"/><path d="M1020 750 1190 350l180 400Z"/></g>
+  <rect width="1600" height="1000" filter="url(#grain)" opacity=".5"/>
+  <g transform="translate(800 500)">
+    <rect x="-330" y="-110" width="660" height="220" rx="18" fill="#EBE3D0" opacity=".94"/>
+    <text x="0" y="-25" text-anchor="middle" fill="#2F3D2B" font-family="Arial, sans-serif" font-size="62" font-weight="700" letter-spacing="8">FOTO REAL</text>
+    <text x="0" y="45" text-anchor="middle" fill="#6A6A56" font-family="Arial, sans-serif" font-size="24" letter-spacing="5">CAMBIA ESTA IMÁGEN</text>
+  </g>
+</svg>

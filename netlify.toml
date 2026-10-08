@@ -1,0 +1,12 @@
+# Configuración estática para Netlify.
+# El directorio de publicación contiene index.html, styles.css, script.js y assets/.
+
+[build]
+  publish = "."
+  command = ""
+
+# Mantiene las rutas internas funcionales cuando se ve desde cualquier subruta.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
