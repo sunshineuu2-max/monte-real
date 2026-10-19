@@ -49,7 +49,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .container { width: var(--container); margin-inline: auto; }
 .section { padding: 5rem 0; }
 .section--cream { background: var(--paper); }
-.section--green { color: var(--white); background: var(--forest); }
+.section--green { position: relative; isolation: isolate; color: var(--white); background: var(--forest); }
+.section--green::before { position: absolute; inset: 0; z-index: -1; background: url("assets/images/botanical-texture.webp?v=20261019-8") center top / 100% auto no-repeat; opacity: .78; mix-blend-mode: screen; content: ""; pointer-events: none; }
 .section--gold { position: relative; isolation: isolate; background: #D8C7A5; }
 .section--gold::before { position: absolute; inset: 0; z-index: -1; background: url("assets/images/botanical-texture.webp?v=20261019-6") center bottom / 100% auto no-repeat; opacity: .16; content: ""; pointer-events: none; }
 .section--contact { color: var(--white); background: var(--forest-deep); }
@@ -143,8 +144,8 @@ h3 { font-size: clamp(1.5rem, 5vw, 2rem); }
 .image-credits a { color: var(--forest); text-underline-offset: .15em; }
 
 .event-grid { display: grid; gap: 1px; background: rgba(255,255,255,.2); }
-.event-grid article { min-height: 15rem; padding: 1.5rem; background: var(--forest); transition: background .25s ease; }
-.event-grid article:hover { background: #394A34; }
+.event-grid article { min-height: 15rem; padding: 1.5rem; background: color-mix(in srgb, var(--forest) 68%, transparent); transition: background .25s ease; }
+.event-grid article:hover { background: color-mix(in srgb, #394A34 68%, transparent); }
 .event-grid span { color: #CDBA8D; font-size: .7rem; letter-spacing: .16em; }
 .event-grid h3 { margin: 2.5rem 0 .6rem; font-size: clamp(1.8rem, 6vw, 2.6rem); }
 .event-grid p { max-width: 33ch; margin: 0; color: rgba(255,255,255,.72); font-size: .92rem; }
