@@ -12,7 +12,23 @@ assert "prefers-reduced-motion" in css
 assert "loading=\"lazy\"" in html and "srcset=" in html and "sizes=" in html
 assert all(item in html for item in ["aria-expanded=", "aria-controls=", "aria-live=\"polite\""])
 assert not re.search(r'<img\b[^>]*\balt=""', html)
-for relative in ["styles.css", "script.js", "assets/monte-real-logo.png", "assets/foto-placeholder.svg"]:
+for relative in [
+    "styles.css",
+    "script.js",
+    "assets/monte-real-logo.png",
+    "assets/monte-real-logo-cream.png",
+    "assets/fonts/inter-variable.ttf",
+    "assets/fonts/poppins-medium.ttf",
+    "assets/images/event-tent-1600.webp",
+    "assets/images/event-tent-social.jpg",
+    "assets/images/botanical-texture.webp",
+    "assets/images/forest-table-1200.webp",
+    "assets/images/garden-ceremony-1200.webp",
+    "assets/images/garden-path-1200.webp",
+    "assets/foto-placeholder.svg",
+]:
     assert (root / relative).exists(), relative
+assert "foto-placeholder.svg" not in html
+assert "IMAGEN ILUSTRATIVA" in html and "unsplash.com/license" in html
 assert "event.preventDefault()" in js and "window.open(whatsappUrl" in js
 print("VALIDACIÓN: 1 h1, HTML y CSS presentes, recursos locales, etiquetas accesibles y JS verificados.")
