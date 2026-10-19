@@ -51,7 +51,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .section--cream { background: var(--paper); }
 .section--green { color: var(--white); background: var(--forest); }
 .section--gold { position: relative; isolation: isolate; background: #D8C7A5; }
-.section--gold::before { position: absolute; inset: 0; z-index: -1; background: url("assets/images/botanical-texture.webp") right center / auto 100% no-repeat; opacity: .35; content: ""; pointer-events: none; }
+.section--gold::before { position: absolute; inset: 0; z-index: -1; background: url("assets/images/botanical-texture.webp?v=20261019-5") right center / auto 100% no-repeat; opacity: .35; content: ""; pointer-events: none; }
 .section--contact { color: var(--white); background: var(--forest-deep); }
 
 .eyebrow { margin: 0 0 .75rem; color: var(--gold); font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
